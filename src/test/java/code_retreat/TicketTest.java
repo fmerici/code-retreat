@@ -13,6 +13,7 @@ import org.testng.annotations.AfterSuite;
 
 public class TicketTest {
 	
+	private Ticket ticket;
 	private TicketTest GIVEN = this, THEN = this, WHEN = this, AND = this;
 	
 	@Test
@@ -23,26 +24,26 @@ public class TicketTest {
 	}
 	
 
-private void noPopCornButAddCffee() {
+	private void noPopCornButAddCffee() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("I WANT COFFEE: " + ticket.getCoffee() +", but NO POPCORN");
 	}
 
 
-private void heJustAte() {
+	private void heJustAte() {
 		// TODO Auto-generated method stub
-		
+	new Ticket().setWhenDinner(true);
 	}
 
 
-private void coffeeAddict() {
+	private void coffeeAddict() {
 		// TODO Auto-generated method stub
-		String person = Ticket.PERSON;
+		System.out.println(ticket.getPerson());
 	}
 
 
-@Test(dataProvider = "dp")
-  public void f(Integer n, String s) {
+@Test(enabled = false, dataProvider = "dp")
+  public void ftest(Integer n, String s) {
   }
   @BeforeMethod
   public void beforeMethod() {
@@ -62,6 +63,7 @@ private void coffeeAddict() {
   }
   @BeforeClass
   public void beforeClass() {
+	  ticket = new Ticket();
   }
 
   @AfterClass
