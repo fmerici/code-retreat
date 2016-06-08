@@ -20,11 +20,11 @@ public class TicketTest {
 	private void testCofeeDrinkerAddict() {
 		GIVEN.coffeeAddict();
 			WHEN.heJustAte();
-		THEN.noPopCornButAddCffee();
+		THEN.noPopCornButAddCoffee();
 	}
 	
 
-	private void noPopCornButAddCffee() {
+	private void noPopCornButAddCoffee() {
 		// TODO Auto-generated method stub
 		System.out.println("I WANT COFFEE: " + ticket.getCoffee() +", but NO POPCORN");
 	}
